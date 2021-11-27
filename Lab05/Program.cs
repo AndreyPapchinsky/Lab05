@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Lab05
 {
@@ -24,7 +24,7 @@ namespace Lab05
                 case 2:
                     Console.WriteLine("Ведите значение стороны треуголника: ");
                     a = double.Parse(Console.ReadLine());
-                    s = Operation.STriangle(a, out s);
+                    s = Operation.STriangle(a);
                     Console.WriteLine("Площадь треугольника: " + s);
                     break;
 
@@ -36,7 +36,7 @@ namespace Lab05
                     Console.WriteLine("Ведите значение стороны треуголника (c): ");
                     c = double.Parse(Console.ReadLine());
 
-                    s = Operation.STriangle(a, b, c, out s);
+                    s = Operation.STriangle(a, b, c);
 
                     if (s>0)
                     {
