@@ -1,21 +1,21 @@
-﻿using System;
+using System;
 
 namespace Lab05
 {
     class Operation
     {
-        public static double STriangle(double a, double b, double c, out double s)
+        public static double STriangle(double a, double b, double c)
         {
             if (Operation.CheckTriangle(a, b, c))
             {
                 double p2 = a + b + c;
                 double p = p2 / 2;
-                s = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
+                double s = Math.Sqrt(p * (p - a) * (p - b) * (p - c));
                 return s;
             }
             else
             {
-                s = 0;
+                double s = 0;
                 return s;
             }
         }
@@ -31,11 +31,11 @@ namespace Lab05
             else
                 return false;
         }
-        public static double STriangle(double a, out double s)
+        public static double STriangle(double a)
         {
             double p2 = a * 3;
             double p = p2 / 2;
-            s = Math.Sqrt(p * (p - a) * (p - a) * (p - a));
+            double s = Math.Sqrt(p * (p - a) * (p - a) * (p - a));
             return s;
         }
     }
